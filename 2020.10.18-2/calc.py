@@ -1,5 +1,3 @@
-import copy
-import math
 import numpy as np
 from bluestain import fft_bluestein
 
