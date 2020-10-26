@@ -30,6 +30,7 @@ npm run demo:build
 # Ответ
 
 Трансляция: -27.07 px, 12.13 px
+
 Вращение: -0.31 rad
 
 ![Проверка](./assets/demo.gif)
