@@ -1,25 +1,24 @@
 {
-  "name": "lab",
+  "name": "cor-2020.10.18-3",
   "version": "1.0.0",
   "scripts": {
     "calc": "node calc/index.js",
     "demo:serve": "parcel serve demo/index.html",
-    "demo:build": "npm run calc && parcel build demo/index.html",
-    "pages": "npm run demo:build && gh-pages -d dist"
+    "demo:build": "npm run calc && parcel build demo/index.html"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-optional-chaining": "^7.12.1",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
-    "hull.js": "^1.0.1",
     "parcel": "^2.0.0-beta.1",
-    "pngjs": "^6.0.0",
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "hull.js": "^1.0.1",
+    "pngjs": "^6.0.0",
     "emotion": "^10.0.27",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

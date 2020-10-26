@@ -21,6 +21,15 @@ injectGlobal`
   }
 `;
 
+const rowClassName = css`
+  display: flex;
+  margin: -0.5rem;
+
+  & > * {
+    margin: 0.5rem;
+  }
+`;
+
 const togglerClassName = css`
   display: block;
   margin: 1rem 0;
@@ -35,16 +44,22 @@ export const App = () => {
   } = result;
   return (
     <Container>
-      <h4>Before</h4>
-      <HullDrawer
-        img={{ src: beforeSrc, width: 128, height: 128 }}
-        hull={{ ...before, transform }}
-      />
-      <h4>After</h4>
-      <HullDrawer
-        img={{ src: afterSrc, width: 128, height: 128 }}
-        hull={{ ...before, transform }}
-      />
+      <div className={rowClassName}>
+        <div>
+          <h4>Before</h4>
+          <HullDrawer
+            img={{ src: beforeSrc, width: 128, height: 128 }}
+            hull={{ ...before, transform }}
+          />
+        </div>
+        <div>
+          <h4>After</h4>
+          <HullDrawer
+            img={{ src: afterSrc, width: 128, height: 128 }}
+            hull={{ ...before, transform }}
+          />
+        </div>
+      </div>
       <button
         className={togglerClassName}
         onClick={() => {
@@ -58,10 +73,11 @@ export const App = () => {
         Toggle
       </button>
       <div>
-        <strong>Translation:</strong> {translate[0]}, {translate[1]}
+        <strong>Translation:</strong> {translate[0].toFixed(2)} px,{' '}
+        {translate[1].toFixed(2)} px
       </div>
       <div>
-        <strong>Rotation:</strong> {rotate} rad
+        <strong>Rotation:</strong> {rotate.toFixed(2)} rad
       </div>
     </Container>
   );
